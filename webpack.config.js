@@ -22,7 +22,9 @@ module.exports = {
             { test:/\.(png|woff|woff2|svg|ttf|eot)($|\?)/i, loader:'url-loader?limit=5000'} // 限制大小小于5k
         ]
     },
-
+    eslint: {
+        configFile: '.eslintrc' // Rules for eslint
+    },
     postcss: [
         require('autoprefixer') //调用autoprefixer插件，例如 display: flex
     ],
