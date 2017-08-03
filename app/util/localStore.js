@@ -1,6 +1,3 @@
-/**
- * Created by Haodong on 2017/7/25.
- */
 export default {
     getItem: function (key) {
         let value
