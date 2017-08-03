@@ -14,9 +14,9 @@ class SearchInput extends React.Component {
     render() {
         return (
             <input
-                className="search-input"
-                type="text"
-                placeholder="请输入关键字"
+                className="search-input" 
+                type="text" 
+                placeholder="请输入关键字" 
                 onChange={this.ChangeHandle.bind(this)}
                 onKeyUp={this.KeyUpHandle.bind(this)}
                 value={this.state.value}/>
