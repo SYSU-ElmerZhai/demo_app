@@ -2,14 +2,15 @@ import React from 'react'
 import PureRenderMixin from 'react-addons-pure-render-mixin'
 import { Link, hashHistory } from 'react-router'
 
-import SearchInput from '../SearchInput'
-
 import './style.less'
 
 class HomeHeader extends React.Component {
     constructor(props, context) {
         super(props, context);
         this.shouldComponentUpdate = PureRenderMixin.shouldComponentUpdate.bind(this);
+        this.state = {
+            kwd: ''
+        }
     }
     render() {
         return (
@@ -22,22 +23,34 @@ class HomeHeader extends React.Component {
                     </Link>
                 </div>
                 <div className="home-header-right float-right">
-                    <Link to="/Login">
-                        <i className="icon-user"></i>
-                    </Link>
+                    <i className="icon-user"></i>
                 </div>
                 <div className="home-header-middle">
                     <div className="search-container">
                         <i className="icon-search"></i>
                         &nbsp;
-                        <SearchInput value="" enterHandle={this.enterHandle.bind(this)}/>
+                        <input 
+                            type="text" 
+                            placeholder="请输入关键字" 
+                            onChange={this.ChangeHandle.bind(this)}
+                            onKeyUp={this.KeyUpHandle.bind(this)}
+                            value={this.state.kwd}/>
                     </div>
                 </div>
             </div>
         )
     }
-    enterHandle(value) {
-        hashHistory.push('/search/all/' + encodeURIComponent(value))
+    ChangeHandle(e) {
+        var val = e.target.value
+        this.setState({
+            kwd: val
+        })
+    }
+    KeyUpHandle(e) {
+        if (e.keyCode !== 13) {
+            return
+        }
+        hashHistory.push('/search/all/' + encodeURIComponent(this.state.kwd))
     }
 }
 
