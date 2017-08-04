@@ -1,6 +1,6 @@
 import React from 'react'
 import PureRenderMixin from 'react-addons-pure-render-mixin'
-import { getCommentData } from '../../../fetch/detail/detail'
+import { getCommentData } from '../../../fetch/detail/detai'
 
 import ListComponent from '../../../components/CommentList'
 import LoadMore from '../../../components/LoadMore'
@@ -24,13 +24,13 @@ class Comment extends React.Component {
                 <h2>用户点评</h2>
                 {
                     this.state.data.length
-                        ? <ListComponent data={this.state.data}/>
-                        : <div>{/* 加载中... */}</div>
+                    ? <ListComponent data={this.state.data}/>
+                    : <div>{/* 加载中... */}</div>
                 }
                 {
                     this.state.hasMore
-                        ? <LoadMore isLoadingMore={this.state.isLoadingMore} loadMoreFn={this.loadMoreData.bind(this)}/>
-                        : ''
+                    ? <LoadMore isLoadingMore={this.state.isLoadingMore} loadMoreFn={this.loadMoreData.bind(this)}/>
+                    : ''
                 }
             </div>
         )
