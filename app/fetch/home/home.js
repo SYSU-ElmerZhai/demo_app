@@ -1,6 +1,3 @@
-/**
- * Created by Haodong on 2017/7/27.
- */
 import { get } from '../get'
 
 export function getAdData() {

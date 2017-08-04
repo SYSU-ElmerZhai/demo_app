@@ -22,9 +22,7 @@ class HomeHeader extends React.Component {
                     </Link>
                 </div>
                 <div className="home-header-right float-right">
-                    <Link to="/Login">
-                        <i className="icon-user"></i>
-                    </Link>
+                    <i className="icon-user"></i>
                 </div>
                 <div className="home-header-middle">
                     <div className="search-container">
