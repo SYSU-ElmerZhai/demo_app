@@ -1,6 +1,3 @@
-/**
- * Created by Haodong on 2017/7/29.
- */
 import * as actionTypes from '../constants/store'
 
 const initialState = []
