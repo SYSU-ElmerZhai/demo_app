@@ -26,13 +26,13 @@ class SearchList extends React.Component {
             <div>
                 {
                     this.state.data.length
-                        ? <ListCompoent data={this.state.data}/>
-                        : <div>{/* 加载中... */}</div>
+                    ? <ListCompoent data={this.state.data}/>
+                    : <div>{/* 加载中... */}</div>
                 }
                 {
                     this.state.hasMore
-                        ? <LoadMore isLoadingMore={this.state.isLoadingMore} loadMoreFn={this.loadMoreData.bind(this)}/>
-                        : ''
+                    ? <LoadMore isLoadingMore={this.state.isLoadingMore} loadMoreFn={this.loadMoreData.bind(this)}/>
+                    : ''
                 }
             </div>
         )

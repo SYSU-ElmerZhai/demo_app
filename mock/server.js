@@ -122,5 +122,5 @@ router.post('/api/submitComment', function *(next) {
 
 // 开始服务并生成路由
 app.use(router.routes())
-    .use(router.allowedMethods());
+   .use(router.allowedMethods());
 app.listen(3000);

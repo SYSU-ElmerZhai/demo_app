@@ -1,7 +1,7 @@
 import React from 'react'
 import PureRenderMixin from 'react-addons-pure-render-mixin'
 
-import { getInfoData } from '../../../fetch/detail/detail'
+import { getInfoData } from '../../../fetch/detail/detai'
 import DetailInfo from '../../../components/DetailInfo'
 
 class Info extends React.Component {
@@ -17,8 +17,8 @@ class Info extends React.Component {
             <div>
                 {
                     this.state.info
-                        ? <DetailInfo data={this.state.info}/>
-                        : ''
+                    ? <DetailInfo data={this.state.info}/>
+                    : ''
                 }
             </div>
         )
