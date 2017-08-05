@@ -30,15 +30,13 @@ class Buy extends React.Component {
         const id = this.props.id
         const store = this.props.store
 
-        // some 即任何一个满足即可
-        store.some(item => {
+        store.forEach(item => {
             if (item.id === id) {
                 // 已经被收藏
                 this.setState({
                     isStore: true
                 })
-                // 跳出循环
-                return true
+                return false
             }
         })
     }
