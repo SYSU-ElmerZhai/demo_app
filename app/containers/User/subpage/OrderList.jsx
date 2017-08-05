@@ -20,8 +20,8 @@ class OrderList extends React.Component {
                 <h2>您的订单</h2>
                 {
                     this.state.data.length
-                        ? <OrderListComponent data={this.state.data} submitComment={this.submitComment.bind(this)}/>
-                        : <div>{/* loading */}</div>
+                    ? <OrderListComponent data={this.state.data} submitComment={this.submitComment.bind(this)}/>
+                    : <div>{/* loading */}</div>
                 }
             </div>
         )
@@ -50,8 +50,8 @@ class OrderList extends React.Component {
         })
     }
     // 提交评价
-    submitComment(id , value, star, callback) {
-        const result = postComment(id, value, star)
+    submitComment(id , value, callback) {
+        const result = postComment(id, value)
         result.then(res => {
             return res.json()
         }).then(json => {
