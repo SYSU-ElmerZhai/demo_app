@@ -1,9 +1,3 @@
-/**
- * Created by Haodong on 2017/7/27.
- */
-/**
- * Created by Haodong on 2017/7/27.
- */
 module.exports = [
     {
         title: '暑假5折',

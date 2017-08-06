@@ -1,12 +1,11 @@
 {
-  "name": "demo_app",
+  "name": "react-dianping-webpack",
   "version": "1.0.0",
   "description": "",
   "main": "index.js",
   "scripts": {
-    "start": "set NODE_ENV=dev && webpack-dev-server --progress --colors",
-    "mock": "node ./mock/server.js",
-    "build": "rd/s/q build && set NODE_ENV=production && webpack --config ./webpack.production.config.js --progress --colors"
+    "start": "NODE_ENV=dev webpack-dev-server --progress --colors",
+    "build": "rm -rf ./build && NODE_ENV=production webpack --config ./webpack.production.config.js --progress --colors"
   },
   "author": "",
   "license": "ISC",
@@ -25,7 +24,6 @@
     "html-webpack-plugin": "^2.22.0",
     "json-loader": "^0.5.4",
     "koa": "^1.2.2",
-    "koa-body": "^1.6.0",
     "koa-router": "^5.4.0",
     "less": "^2.7.1",
     "less-loader": "^2.2.3",
@@ -40,15 +38,7 @@
   "dependencies": {
     "react": "^15.3.1",
     "react-dom": "^15.3.1",
-    "react-router": "^2.8.1",
     "react-redux": "^4.4.5",
-    "redux": "^3.6.0",
-    "react-addons-css-transition-group": "^15.3.1",
-    "react-addons-pure-render-mixin": "^15.3.1",
-    "react-swipe": "^5.0.5",
-    "swipe-js-iso": "^2.0.3",
-    "es6-promise": "^3.2.1",
-    "immutable": "^3.8.1",
-    "whatwg-fetch": "^1.0.0"
+    "redux": "^3.6.0"
   }
 }
