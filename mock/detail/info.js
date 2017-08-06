@@ -1,6 +1,3 @@
-/**
- * Created by Haodong on 2017/7/29.
- */
 module.exports = {
     img: 'http://images2015.cnblogs.com/blog/138012/201610/138012-20161016201645858-1342445625.png',
     title: '天下第一锅',

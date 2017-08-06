@@ -4,7 +4,7 @@ import { connect } from 'react-redux'
 import { bindActionCreators } from 'redux'
 import { hashHistory } from 'react-router'
 
-import * as userInfoActionsFromOtherFile from '../../actions/userinfo'
+import * as userInfoActionsFromOtherFile from '../../actions/userinfo' 
 
 import Header from '../../components/Header'
 import LoginComponent from '../../components/Login'
@@ -24,8 +24,8 @@ class Login extends React.Component {
                 {
                     // 等待验证之后，再显示登录信息
                     this.state.checking
-                        ? <div>{/* 等待中 */}</div>
-                        : <LoginComponent loginHandle={this.loginHandle.bind(this)}/>
+                    ? <div>{/* 等待中 */}</div>
+                    : <LoginComponent loginHandle={this.loginHandle.bind(this)}/>
                 }
             </div>
         )
