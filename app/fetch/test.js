@@ -1,6 +1,3 @@
-/**
- * Created by Haodong on 2017/7/26.
- */
 import 'whatwg-fetch'
 import 'es6-promise'
 
