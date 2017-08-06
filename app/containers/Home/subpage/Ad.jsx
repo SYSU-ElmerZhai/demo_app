@@ -14,11 +14,11 @@ class Ad extends React.Component {
     render() {
         return (
             <div>
-                {
-                    this.state.data.length
-                        ? <HomeAd data={this.state.data}/>
-                        : <div>{/* 加载中... */}</div>
-                }
+            {
+                this.state.data.length
+                ? <HomeAd data={this.state.data}/>
+                : <div>{/* 加载中... */}</div>
+            }
             </div>
         )
     }

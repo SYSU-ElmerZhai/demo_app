@@ -27,14 +27,14 @@ class Item extends React.Component {
                     <div className="order-item-comment float-right">
                         {
                             this.state.commentState === 0
-                                // 未评价
-                                ? <button className="btn" onClick={this.showComment.bind(this)}>评价</button>
-                                :
+                            // 未评价
+                            ? <button className="btn" onClick={this.showComment.bind(this)}>评价</button>
+                            :
                                 this.state.commentState === 1
-                                    // 评价中
-                                    ? ''
-                                    // 已经评价
-                                    : <button className="btn unseleted-btn">已评价</button>
+                                // 评价中
+                                ? ''
+                                // 已经评价
+                                : <button className="btn unseleted-btn">已评价</button>
                         }
                     </div>
                     <div className="order-item-content">
@@ -46,16 +46,16 @@ class Item extends React.Component {
                 {
                     // “评价中”才会显示输入框
                     this.state.commentState === 1
-                        ? <div className="comment-text-container">
-                            <textarea style={{width: '100%', height: '80px'}} className="comment-text" ref="commentText"></textarea>
-                            <div style={{paddingTop: '10px', paddingBottom: '10px'}}>
-                                <Star star="0" clickCallback={this.starClickCallback.bind(this)}/>
-                            </div>
-                            <button className="btn" onClick={this.submitComment.bind(this)}>提交</button>
-                            &nbsp;
-                            <button className="btn unseleted-btn" onClick={this.hideComment.bind(this)}>取消</button>
+                    ? <div className="comment-text-container">
+                        <textarea style={{width: '100%', height: '80px'}} className="comment-text" ref="commentText"></textarea>
+                        <div style={{paddingTop: '10px', paddingBottom: '10px'}}>
+                            <Star star="0" clickCallback={this.starClickCallback.bind(this)}/>
                         </div>
-                        : ''
+                        <button className="btn" onClick={this.submitComment.bind(this)}>提交</button>
+                        &nbsp;
+                        <button className="btn unseleted-btn" onClick={this.hideComment.bind(this)}>取消</button>
+                    </div>
+                    : ''
                 }
             </div>
         )
